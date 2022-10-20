@@ -39,7 +39,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                message.error(request, "You didn't enter ant search criteria!")
+                messages.error(request, "You didn't enter ant search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
