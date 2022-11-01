@@ -1,0 +1,1 @@
+web: gunicorn ed-ado.wsgi:application
